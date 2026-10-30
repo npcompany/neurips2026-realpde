@@ -1,0 +1,9 @@
+# ruff settings of the development repository (pyproject.toml [tool.ruff]), shipped so that
+# scripts/ship/clean_bundle.py formats the pruned inference bundle exactly as it did when the
+# board artifact was built (the no-warm-up step checks the generated text verbatim).
+line-length = 100
+src = ["src", "scripts"]
+extend-exclude = ["vendor"]
+
+[lint]
+select = ["E", "F", "I", "UP", "B"]
